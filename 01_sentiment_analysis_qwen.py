@@ -4,6 +4,9 @@ from http import HTTPStatus
 import dashscope
 
 
+MODEL_NAME = 'qwen-turbo'
+
+
 def load_env_file(path='.env'):
     if not os.path.exists(path):
         return
@@ -28,7 +31,7 @@ def get_response(messages):
         raise RuntimeError('请先配置 DASHSCOPE_API_KEY 环境变量，或者在项目根目录创建 .env 文件。')
 
     response = dashscope.Generation.call(
-        model='qwen-turbo',
+        model=MODEL_NAME,
         messages=messages,
         result_format='message'  # 将输出设置为message形式
     )

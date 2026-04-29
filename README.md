@@ -14,6 +14,7 @@
 
 当前文件：
 
+- `01_sentiment_analysis_qwen.py`：按课程截图整理的原样版代码
 - `main.py`：情感分析主程序
 - `requirements.txt`：Python 依赖
 - `.env.example`：环境变量示例
@@ -34,6 +35,12 @@ Windows PowerShell 临时配置：
 $env:DASHSCOPE_API_KEY="sk-你的真实密钥"
 ```
 
+也可以在项目根目录创建 `.env` 文件：
+
+```text
+DASHSCOPE_API_KEY=sk-你的真实密钥
+```
+
 如果希望长期生效，可以在 Windows 系统环境变量中新增：
 
 ```text
@@ -46,6 +53,12 @@ DASHSCOPE_API_KEY=sk-你的真实密钥
 
 ```bash
 python main.py
+```
+
+运行课程截图对应的 Qwen 情感分析案例：
+
+```bash
+python 01_sentiment_analysis_qwen.py
 ```
 
 输入自己的评论：
